@@ -38,7 +38,7 @@ public class BookController {
     }
 
     /* get a book by author id */
-    @GetMapping(value = "/book/author/{id}")
+    @GetMapping(value = "/book/author/{authorId}")
     @ResponseStatus(HttpStatus.OK)
     public List<Book> getBookByAuthor(@PathVariable int authorId) {
         return bookRepository.findAllBooksByAuthorId(authorId);
