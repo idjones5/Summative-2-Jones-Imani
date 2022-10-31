@@ -27,12 +27,12 @@ public class AuthorRepositoryTest {
         authorRepository.deleteAll();
     }
 
+    /* testing create, get, delete */
     @Test
     public void addGetDeleteAuthor() {
 
-        /* testing create, get, delete */
-
         Author author = new Author();
+
         author.setFirstName("jung gi");
         author.setLastName("kim");
         author.setStreet("123 fake street");
@@ -55,10 +55,9 @@ public class AuthorRepositoryTest {
         assertFalse(author1.isPresent());
     }
 
+    /* making sure all the authors are retrieved */
     @Test
     public void getAllAuthors() {
-
-        /* making sure all the authors are retrieved */
 
         Author author = new Author();
         author.setFirstName("jung gi");
@@ -89,11 +88,9 @@ public class AuthorRepositoryTest {
         assertEquals(authorList.size(), 2);
     }
 
-
+    /* making sure the author was successfully updated */
     @Test
     public void updateAuthor() {
-
-        /* making sure the author was successfully updated */
 
         Author author = new Author();
         author.setFirstName("jung gi");
